@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
-import path from 'path'
 import glob from 'glob'
+import path from 'path'
 
 function updateDemo(demoPath: string) {
   const contents = fs.readFileSync(demoPath).toString()
@@ -31,7 +31,3 @@ glob(path.join(__dirname, '../src/rvise-demos/src/demos/**/*'), (error, matches)
   const demos = matches.filter((file) => file.includes('.demo.'))
   demos.forEach(updateDemo)
 })
-
-// updateDemo(
-//   path.join(__dirname, '../src/rvise-demos/src/demos/carousel/Carousel.demo.animationOffset.tsx')
-// );

@@ -1,17 +1,16 @@
-import path from 'path'
 import chalk from 'chalk'
+import path from 'path'
 import simpleGit from 'simple-git'
-import githubRelease from 'new-github-release-url'
-import open from 'open'
-import yargs from 'yargs/yargs'
 import { hideBin } from 'yargs/helpers'
-import { Logger } from './utils/Logger'
-import { publishPackage } from './utils/publish-package'
+import yargs from 'yargs/yargs'
+
+import packageJson from '../package.json'
 import { getIncrementedVersion } from './release/get-incremented-version'
 import { setPackagesVersion } from './release/set-packages-version'
 import { buildAllPackages } from './utils/build-all-packages'
 import { getPackagesBuildOrder } from './utils/get-packages-build-order'
-import packageJson from '../package.json'
+import { Logger } from './utils/Logger'
+import { publishPackage } from './utils/publish-package'
 
 const logger = new Logger('release')
 const git = simpleGit()
@@ -102,13 +101,4 @@ const { argv }: { argv: any } = yargs(hideBin(process.argv))
   await git.add([path.join(__dirname, '../src'), path.join(__dirname, '../package.json')])
   await git.commit(`[release] Version: ${incrementedVersion}`)
   await git.push()
-
-  open(
-    githubRelease({
-      user: 'irevdev',
-      repo: 'https://github.com/irevdev/base.git',
-      tag: incrementedVersion,
-      title: incrementedVersion,
-    }),
-  )
 })()

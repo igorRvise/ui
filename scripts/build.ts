@@ -1,10 +1,10 @@
 /* eslint-disable no-restricted-syntax */
+import { hideBin } from 'yargs/helpers'
 /* eslint-disable no-await-in-loop */
 import yargs from 'yargs/yargs'
-import { hideBin } from 'yargs/helpers'
 
-import { buildPackage, BuildOptions } from './utils/build-package'
 import { buildAllPackages } from './utils/build-all-packages'
+import { BuildOptions, buildPackage } from './utils/build-package'
 
 const { argv }: { argv: any } = yargs(hideBin(process.argv))
   .option('all', {

@@ -1,7 +1,8 @@
-import fs from 'fs-extra'
-import path from 'path'
-import isDir from 'is-directory'
 import chalk from 'chalk'
+import fs from 'fs-extra'
+import isDir from 'is-directory'
+import path from 'path'
+
 import { Logger } from './utils/Logger'
 
 const logger = new Logger('check-conflicts')
