@@ -6,7 +6,7 @@
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
-  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "author": "Rvise",
   "keywords": [],
   "peerDependencies": {},
   "dependencies": {},

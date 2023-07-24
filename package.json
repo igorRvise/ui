@@ -1,14 +1,14 @@
 {
   "name": "rviseui",
-  "private": true,
+  "private": false,
   "workspaces": [
     "src/*"
   ],
   "version": "0.4.31",
   "description": "Rvise Components Monorepo",
   "main": "index.js",
-  "repository": "https://github.com/irevdev/base",
-  "author": "Igor Revenko <igor@rvise.com.au>",
+  "repository": "",
+  "author": "Rvise",
   "license": "MIT",
   "scripts": {
     "changelog": "esno scripts/changelog",

@@ -6,11 +6,11 @@
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
-  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "author": "Rvise",
   "sideEffects": false,
-  "homepage": "https://rvise.dev/others/notifications/",
+  "homepage": "https://rvise.com.au",
   "repository": {
-    "url": "https://github.com/irevdev/base.git",
+    "url": "",
     "type": "git",
     "directory": "src/rviseui-notifications"
   },

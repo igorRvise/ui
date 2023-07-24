@@ -7,10 +7,10 @@
   "types": "lib/index.d.ts",
   "license": "MIT",
   "sideEffects": false,
-  "author": "Igor Revenko <igor@rviseui.com.au>",
-  "homepage": "https://rvise.dev/dates/getting-started/",
+  "author": "Rvise",
+  "homepage": "https://rvise.com.au/",
   "repository": {
-    "url": "https://github.com/irevdev/base.git",
+    "url": "",
     "type": "git",
     "directory": "src/rviseui-dates"
   },
