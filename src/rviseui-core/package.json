@@ -1,0 +1,42 @@
+{
+  "name": "@rviseui/core",
+  "description": "React components library focused on usability, accessibility and developer experience",
+  "version": "0.4.30",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "sideEffects": false,
+  "homepage": "https://rvise.dev/",
+  "repository": {
+    "url": "https://github.com/irevdev/base.git",
+    "type": "git",
+    "directory": "src/rviseui-core"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "ui",
+    "components",
+    "ui-kit",
+    "library",
+    "frontend",
+    "design",
+    "emotion"
+  ],
+  "peerDependencies": {
+    "@rviseui/hooks": "0.4.30",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@rviseui/utils": "0.4.30",
+    "@rviseui/styles": "0.4.30",
+    "@radix-ui/react-scroll-area": "1.0.2",
+    "react-textarea-autosize": "8.3.4",
+    "@floating-ui/react": "^0.19.1"
+  },
+  "devDependencies": {}
+}

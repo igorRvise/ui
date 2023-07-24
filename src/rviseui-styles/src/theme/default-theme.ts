@@ -1,0 +1,201 @@
+import { DEFAULT_COLORS } from './default-colors'
+import { attachFunctions } from './functions/attach-functions'
+import { RviseThemeBase } from './types'
+
+export const RVISE_COLORS = Object.keys(DEFAULT_COLORS)
+export const RVISE_SIZES = ['xs', 'sm', 'md', 'lg', 'xl'] as const
+
+export const _DEFAULT_THEME: RviseThemeBase = {
+  dir: 'ltr',
+  primaryShade: {
+    light: 6,
+    dark: 8,
+  },
+  focusRing: 'auto',
+  loader: 'oval',
+  dateFormat: 'MMMM D, YYYY',
+  colorScheme: 'light',
+  white: '#fff',
+  black: '#000',
+  defaultBorderColor: `#E2E5F1`,
+  defaultDividerColor: `#E2E5F1`,
+  defaultRadius: 'sm',
+  transitionTimingFunction: 'ease',
+  colors: DEFAULT_COLORS,
+  lineHeight: 1.55,
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+  fontFamilyMonospace: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+  primaryColor: 'primary',
+  respectReducedMotion: true,
+  cursorType: 'default',
+  defaultGradient: {
+    from: 'indigo',
+    to: 'cyan',
+    deg: 45,
+  },
+  cssTransitions: {
+    productive: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
+    expressive: 'cubic-bezier(0.58, 0.01, 0.15, 1.5)',
+    focus: 'cubic-bezier(0.46, 0.03, 0.52, 0.96)',
+    linear: 'cubic-bezier(0, 0, 1, 1)',
+    standard: 'cubic-bezier(0.34, 0.69, 0.1, 1)',
+    overshoot: 'cubic-bezier(0.3, 1.3, 0.3, 1)',
+    decelerate: 'cubic-bezier(0.4, 0.8, 0.74, 1)',
+    accelerate: 'cubic-bezier(0.26, 0, 0.6, 0.2)',
+  },
+  durations: {
+    0: '0.1s',
+    1: '0.2s',
+    2: '0.3s',
+    3: '0.4s',
+    4: '0.5s',
+    5: '0.6s',
+    6: '0.7s',
+    7: '0.8s',
+    8: '0.9s',
+    9: '1s',
+  },
+  shadows: {
+    xs: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
+    sm: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 10px 15px -5px, rgba(0, 0, 0, 0.04) 0px 7px 7px -5px',
+    md: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px',
+    lg: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px',
+    xl: '0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 36px 28px -7px, rgba(0, 0, 0, 0.04) 0px 17px 17px -7px',
+  },
+  fontSizes: {
+    xs: 12,
+    sm: 14,
+    md: 16,
+    lg: 18,
+    xl: 20,
+    label: 12,
+    titleLabel: 14,
+    description: 14,
+    accent: 20,
+    body: 16,
+    lead: 24,
+    caption: 12,
+  },
+
+  radius: {
+    xs: 2,
+    sm: 4,
+    md: 8,
+    lg: 16,
+    xl: 32,
+  },
+
+  spacing: {
+    xs: 10,
+    sm: 12,
+    md: 16,
+    lg: 20,
+    xl: 24,
+    1: '0.4rem',
+    2: '0.8rem',
+    3: '1.2rem',
+    4: '1.6rem',
+    5: '2.4rem',
+    6: '2.8rem',
+    7: '3.2rem',
+    8: '3.6rem',
+    9: '4rem',
+    10: '4.8rem',
+    11: '5.6rem',
+    12: '6.4rem',
+    13: '7.2rem',
+    14: '8rem',
+    15: '9.6rem',
+    16: '11.2rem',
+    17: '12.8rem',
+    18: '14.4rem',
+    19: '16rem',
+    20: '17.6rem',
+  },
+  breakpoints: {
+    xs: 530,
+    sm: 768,
+    md: 992,
+    lg: 1120,
+    xl: 1280,
+  },
+  text: {
+    bodyColor: '#565973',
+    dimmedColor: '#9397AD',
+  },
+  headings: {
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+    fontWeight: 700,
+    color: '#0B0F19',
+    sizes: {
+      h1: { fontSize: 'clamp(3.6rem, 5vw + 1px, 4rem)', lineHeight: 1.3, fontWeight: undefined },
+      h2: { fontSize: 'clamp(2.8rem, 5vw + 1px, 3.2rem)', lineHeight: 1.3, fontWeight: undefined },
+      h3: { fontSize: 'clamp(2.4rem, 5vw + 1px, 2.8rem)', lineHeight: 1.3, fontWeight: undefined },
+      h4: { fontSize: 'clamp(2rem, 5vw + 1px, 2.4rem)', lineHeight: 1.4, fontWeight: undefined },
+      h5: { fontSize: 'clamp(1.8rem, 5vw + 1px, 2rem)', lineHeight: 1.4, fontWeight: undefined },
+      h6: { fontSize: 16, lineHeight: 1.5, fontWeight: undefined },
+      d1: { fontSize: 'clamp(4rem, 5vw + 1px, 5.4rem)', lineHeight: 1.3, fontWeight: undefined },
+      d2: { fontSize: 'clamp(3.6rem, 5vw + 1px, 4.8rem)', lineHeight: 1.3, fontWeight: undefined },
+      d3: { fontSize: 'clamp(3.2rem, 5vw + 1px, 4.4rem)', lineHeight: 1.3, fontWeight: undefined },
+      d4: {
+        fontSize: ' clamp(2.6rem, 5vw + 1px, 3.4rem)',
+        lineHeight: 1.3,
+        fontWeight: undefined,
+      },
+      d5: {
+        fontSize: 'clamp(2.8rem, 5vw + 1px, 3.8rem)',
+        lineHeight: 1.3,
+        fontWeight: undefined,
+      },
+      d6: { fontSize: 'clamp(2.2rem, 5vw + 1px, 3rem)', lineHeight: 1.3, fontWeight: undefined },
+    },
+    breakpoints: {
+      sm: {
+        d1: { fontSize: 'clamp(5.4rem, 4vw + 1px, 8rem)', lineHeight: '130%', fontWeight: undefined },
+        d2: { fontSize: 'clamp(4.8rem, 5vw + 1px, 7.2rem)', lineHeight: '130%', fontWeight: undefined },
+        d3: { fontSize: 'clamp(4.4rem, 5vw + 1px, 6.4rem)', lineHeight: '130%', fontWeight: undefined },
+        d4: { fontSize: 'clamp(3.8rem, 5vw + 1px, 5.6rem)', lineHeight: '130%', fontWeight: undefined },
+        d5: { fontSize: 'clamp(3.4rem, 5vw + 1px, 4.8rem)', lineHeight: '130%', fontWeight: undefined },
+        d6: { fontSize: 'clamp(3rem, 5vw + 1px, 4rem)', lineHeight: '130%', fontWeight: undefined },
+      },
+      md: {
+        h1: { fontSize: 40, lineHeight: 1.3, fontWeight: undefined },
+        h2: { fontSize: 32, lineHeight: 1.33, fontWeight: undefined },
+        h3: { fontSize: 28, lineHeight: 1.3, fontWeight: undefined },
+        h4: { fontSize: 24, lineHeight: 1.4, fontWeight: undefined },
+        h5: { fontSize: 20, lineHeight: 1.4, fontWeight: undefined },
+        h6: { fontSize: 16, lineHeight: 1.4, fontWeight: undefined },
+        d1: { fontSize: 80, lineHeight: 1.3, fontWeight: undefined },
+        d2: { fontSize: 72, lineHeight: 1.3, fontWeight: undefined },
+        d3: { fontSize: 64, lineHeight: 1.3, fontWeight: undefined },
+        d4: { fontSize: 56, lineHeight: 1.34, fontWeight: undefined },
+        d5: { fontSize: 48, lineHeight: 1.34, fontWeight: undefined },
+        d6: { fontSize: 40, lineHeight: 1.34, fontWeight: undefined },
+      },
+    },
+  },
+
+  other: {},
+  components: {},
+  activeStyles: { transform: 'translateY(1px)' },
+  datesLocale: 'en',
+  globalStyles: undefined,
+  focusRingStyles: {
+    styles: (theme) => ({
+      outlineOffset: 2,
+      outline: `2px solid ${theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5]}`,
+    }),
+    resetStyles: () => ({ outline: 'none' }),
+    inputStyles: (theme) => ({
+      outline: 'none',
+      borderColor:
+        theme.colors[theme.primaryColor][
+          typeof theme.primaryShade === 'object' ? theme.primaryShade[theme.colorScheme] : theme.primaryShade
+        ],
+    }),
+  },
+}
+
+export const DEFAULT_THEME = attachFunctions(_DEFAULT_THEME)

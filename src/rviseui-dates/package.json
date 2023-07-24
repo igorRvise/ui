@@ -1,0 +1,41 @@
+{
+  "name": "@rviseui/dates",
+  "description": "Calendars, date and time pickers based on Rvise components",
+  "version": "0.4.30",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "homepage": "https://rvise.dev/dates/getting-started/",
+  "repository": {
+    "url": "https://github.com/irevdev/base.git",
+    "type": "git",
+    "directory": "src/rviseui-dates"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "ui",
+    "components",
+    "ui-kit",
+    "library",
+    "frontend",
+    "calendar",
+    "date",
+    "time",
+    "picker"
+  ],
+  "peerDependencies": {
+    "@rviseui/core": "0.4.30",
+    "@rviseui/hooks": "0.4.30",
+    "dayjs": ">=1.0.0",
+    "react": ">=16.8.0"
+  },
+  "dependencies": {
+    "@rviseui/utils": "0.4.30"
+  },
+  "devDependencies": {}
+}

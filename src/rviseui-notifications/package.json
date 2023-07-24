@@ -1,0 +1,41 @@
+{
+  "name": "@rviseui/notifications",
+  "description": "Notification system based on Rvise components",
+  "version": "0.4.30",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "sideEffects": false,
+  "homepage": "https://rvise.dev/others/notifications/",
+  "repository": {
+    "url": "https://github.com/irevdev/base.git",
+    "type": "git",
+    "directory": "src/rviseui-notifications"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "ui",
+    "components",
+    "ui-kit",
+    "library",
+    "frontend",
+    "notification",
+    "notification-manager",
+    "notification-system"
+  ],
+  "peerDependencies": {
+    "@rviseui/core": "0.4.30",
+    "@rviseui/hooks": "0.4.30",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "react-transition-group": "4.4.2",
+    "@rviseui/utils": "0.4.30"
+  },
+  "devDependencies": {}
+}

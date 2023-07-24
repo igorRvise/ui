@@ -1,0 +1,27 @@
+{
+  "name": "@rviseui/nprogress",
+  "description": "Navigation progress bar",
+  "version": "0.4.30",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "sideEffects": false,
+  "homepage": "https://rvise.dev/others/nprogress/",
+  "repository": {
+    "url": "https://github.com/irevdev/base.git",
+    "type": "git",
+    "directory": "src/rviseui-nprogress"
+  },
+  "peerDependencies": {
+    "@rviseui/core": "0.4.30",
+    "@rviseui/hooks": "0.4.30",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@rviseui/utils": "0.4.30"
+  },
+  "devDependencies": {}
+}

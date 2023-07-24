@@ -1,0 +1,38 @@
+{
+  "name": "@rviseui/styles",
+  "description": "Rvise css-in-js styles engine, based on emotion",
+  "version": "0.4.30",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Igor Revenko <igor@rviseui.com.au>",
+  "sideEffects": false,
+  "homepage": "https://rvise.dev",
+  "repository": {
+    "url": "https://github.com/irevdev/base.git",
+    "type": "git",
+    "directory": "src/rviseui-styles"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "ui",
+    "library",
+    "frontend",
+    "emotion",
+    "css-in-js",
+    "styling"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "@emotion/react": ">=11.9.0"
+  },
+  "dependencies": {
+    "clsx": "1.1.1",
+    "csstype": "3.0.9"
+  },
+  "devDependencies": {}
+}

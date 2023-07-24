@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "./types", "../../configuration/types"],
+  "exclude": ["./lib", "./esm", "./cjs"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@rviseui/core": ["../rviseui-core/src"],
+      "@rviseui/dates": ["../rviseui-dates/src"],
+      "@rviseui/hooks": ["../rviseui-hooks/src"],
+      "@rviseui/notifications": ["../rviseui-notifications/src"],
+      "@rviseui/modals": ["../rviseui-modals/src"],
+      "@rviseui/storybook": ["../rviseui-storybook/src"]
+    }
+  },
+  "references": [
+    { "path": "../rviseui-core" },
+    { "path": "../rviseui-dates" },
+    { "path": "../rviseui-hooks" },
+    { "path": "../rviseui-notifications" },
+    { "path": "../rviseui-modals" },
+    { "path": "../rviseui-storybook" }
+  ]
+}

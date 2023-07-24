@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "./types", "../../configuration/types"],
+  "exclude": ["./lib", "./esm", "./cjs"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@rviseui/core": ["../rviseui-core/src"],
+      "@rviseui/hooks": ["../rviseui-hooks/src"],
+      "@rviseui/utils": ["../rviseui-utils/src"],
+      "@rviseui/storybook": ["../rviseui-storybook/src"],
+      "@rviseui/tests": ["../rviseui-tests/src"]
+    }
+  },
+  "references": [
+    { "path": "../rviseui-core" },
+    { "path": "../rviseui-hooks" },
+    { "path": "../rviseui-utils" },
+    { "path": "../rviseui-storybook" },
+    { "path": "../rviseui-tests" }
+  ]
+}
