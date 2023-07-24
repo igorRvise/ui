@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/styles-api",
   "description": "Rvise components styles api descriptions",
-  "version": "0.4.31",
+  "version": "0.4.32",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -15,8 +15,8 @@
     "directory": "src/rviseui-styles-api"
   },
   "peerDependencies": {
-    "@rviseui/core": "0.4.31",
-    "@rviseui/hooks": "0.4.31"
+    "@rviseui/core": "0.4.32",
+    "@rviseui/hooks": "0.4.32"
   },
   "dependencies": {},
   "devDependencies": {}

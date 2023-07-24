@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/styles",
   "description": "Rvise css-in-js styles engine, based on emotion",
-  "version": "0.4.31",
+  "version": "0.4.32",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",

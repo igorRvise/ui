@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/modals",
   "description": "Modals manager based on Rvise components",
-  "version": "0.4.31",
+  "version": "0.4.32",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -27,13 +27,13 @@
     "confirm"
   ],
   "peerDependencies": {
-    "@rviseui/core": "0.4.31",
-    "@rviseui/hooks": "0.4.31",
+    "@rviseui/core": "0.4.32",
+    "@rviseui/hooks": "0.4.32",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@rviseui/utils": "0.4.31"
+    "@rviseui/utils": "0.4.32"
   },
   "devDependencies": {}
 }
