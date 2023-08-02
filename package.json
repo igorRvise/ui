@@ -4,7 +4,7 @@
   "workspaces": [
     "src/*"
   ],
-  "version": "0.4.32",
+  "version": "0.4.33",
   "description": "Rvise Components Monorepo",
   "main": "index.js",
   "repository": "",

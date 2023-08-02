@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/core",
   "description": "React components library focused on usability, accessibility and developer experience",
-  "version": "0.4.32",
+  "version": "0.4.33",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -27,13 +27,13 @@
     "emotion"
   ],
   "peerDependencies": {
-    "@rviseui/hooks": "0.4.32",
+    "@rviseui/hooks": "0.4.33",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@rviseui/utils": "0.4.32",
-    "@rviseui/styles": "0.4.32",
+    "@rviseui/utils": "0.4.33",
+    "@rviseui/styles": "0.4.33",
     "@radix-ui/react-scroll-area": "1.0.2",
     "react-textarea-autosize": "8.3.4",
     "@floating-ui/react": "^0.19.1"
