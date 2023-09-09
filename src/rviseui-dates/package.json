@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/dates",
   "description": "Calendars, date and time pickers based on Rvise components",
-  "version": "0.4.33",
+  "version": "0.4.34",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -29,13 +29,13 @@
     "picker"
   ],
   "peerDependencies": {
-    "@rviseui/core": "0.4.33",
-    "@rviseui/hooks": "0.4.33",
+    "@rviseui/core": "0.4.34",
+    "@rviseui/hooks": "0.4.34",
     "dayjs": ">=1.0.0",
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@rviseui/utils": "0.4.33"
+    "@rviseui/utils": "0.4.34"
   },
   "devDependencies": {}
 }

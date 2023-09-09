@@ -1,6 +1,6 @@
 {
   "name": "@rviseui/hooks",
-  "version": "0.4.33",
+  "version": "0.4.34",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
