@@ -1,18 +1,20 @@
 import React, { forwardRef } from 'react'
+
 import {
   DefaultProps,
-  RviseSize,
-  RviseNumberSize,
-  RviseGradient,
   RviseColor,
+  RviseGradient,
+  RviseNumberSize,
+  RviseSize,
   Selectors,
   useComponentDefaultProps,
 } from '@rviseui/styles'
 import { createPolymorphicComponent } from '@rviseui/utils'
-import { UnstyledButton } from '../UnstyledButton'
+
 import { Loader, LoaderProps } from '../Loader'
+import { UnstyledButton } from '../UnstyledButton'
+import useStyles, { ButtonStylesParams, ButtonVariant, sizes } from './Button.styles'
 import { ButtonGroup } from './ButtonGroup/ButtonGroup'
-import useStyles, { sizes, ButtonVariant, ButtonStylesParams } from './Button.styles'
 
 export type ButtonStylesNames = Selectors<typeof useStyles>
 
@@ -115,7 +117,7 @@ export const _Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) =
 
   const colors = theme.fn.variant({ color, variant })
 
-  const loader = <Loader color={colors.color} size={theme.fn.size({ size, sizes }).height / 2} {...loaderProps} />
+  const loader = <Loader color={colors.color} size={theme.fn.size({ size, sizes }).minHeight / 2} {...loaderProps} />
 
   return (
     <UnstyledButton
