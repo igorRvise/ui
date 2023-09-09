@@ -1,6 +1,14 @@
 {
   "extends": "./tsconfig.base.json",
-  "include": ["src/rviseui-*/src", "./types", "./scripts", "./configuration", "./configuration/types", "./tests"],
+  "include": [
+    "src/rviseui-*/src",
+    "./types",
+    "./scripts",
+    "./configuration",
+    "./configuration/types",
+    "./tests",
+    "src/rviseui-notifications/src/Notifications.story.tsx"
+  ],
   "exclude": [
     "public",
     ".cache",

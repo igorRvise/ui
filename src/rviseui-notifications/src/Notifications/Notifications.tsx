@@ -1,35 +1,36 @@
 import React, { useRef } from 'react'
 import { Transition, TransitionGroup } from 'react-transition-group'
-import { DefaultProps, Portal, RviseStyleSystemSize, getDefaultZIndex, Box, PortalProps } from '@rviseui/core'
-import { useReducedMotion, useForceUpdate, useDidUpdate } from '@rviseui/hooks'
-import { NotificationsContext } from '../Notifications.context'
-import { NotificationsProviderPositioning } from '../types'
-import { useNotificationsEvents } from '../events'
-import getPositionStyles from './get-position-styles/get-position-styles'
-import getNotificationStateStyles from './get-notification-state-styles/get-notification-state-styles'
+
+import { Box, DefaultProps, getDefaultZIndex, Portal, PortalProps } from '@rviseui/core'
+import { useDidUpdate, useForceUpdate, useReducedMotion } from '@rviseui/hooks'
+
+import { notifications as GlobalNotifications, NotificationsEvents, useNotificationsEvents } from '../events'
 import NotificationContainer from '../NotificationContainer/NotificationContainer'
-import useStyles from './NotificationsProvider.styles'
+import { NotificationsPositioning } from '../types'
+import getNotificationStateStyles from './get-notification-state-styles/get-notification-state-styles'
+import getPositionStyles from './get-position-styles/get-position-styles'
+import useStyles from './Notifications.styles'
 import useNotificationsState from './use-notifications-state/use-notifications-state'
 
 const POSITIONS = ['top-left', 'top-right', 'top-center', 'bottom-left', 'bottom-right', 'bottom-center'] as const
 
-export interface NotificationProviderProps
-  extends Omit<DefaultProps, RviseStyleSystemSize>,
-    React.ComponentPropsWithoutRef<'div'> {
+type NotificationsStaticMethods = NotificationsEvents
+
+export interface NotificationsProps extends Omit<DefaultProps, 'style'>, React.ComponentPropsWithoutRef<'div'> {
   /** Notifications position */
   position?: 'top-left' | 'top-right' | 'top-center' | 'bottom-left' | 'bottom-right' | 'bottom-center'
 
-  /** Auto close timeout for all notifications, false to disable auto close, can be overwritten for individual notifications by showNotification function */
+  /** Auto close timeout for all notifications, false to disable auto close, can be overwritten for individual notifications by notifications.show function */
   autoClose?: number | false
 
   /** Notification transitions duration, 0 to turn transitions off */
   transitionDuration?: number
 
-  /** Notification width in px, cannot exceed 100% */
-  containerWidth?: number
+  /** Notification width, cannot exceed 100% */
+  containerWidth?: number | string
 
-  /** Notification max-height in px, used for transitions */
-  notificationMaxHeight?: number
+  /** Notification max-height, used for transitions */
+  notificationMaxHeight?: number | string
 
   /** Maximum amount of notifications displayed at a time, other new notifications will be added to queue */
   limit?: number
@@ -37,14 +38,11 @@ export interface NotificationProviderProps
   /** Notifications container z-index */
   zIndex?: React.CSSProperties['zIndex']
 
-  /** Your application */
-  children?: React.ReactNode
-
   /** Target element of Portal component */
   target?: PortalProps['target']
 }
 
-export function NotificationsProvider({
+export const Notifications: React.FC<NotificationsProps> & NotificationsStaticMethods = ({
   className,
   position = 'bottom-right',
   autoClose = 4000,
@@ -57,21 +55,18 @@ export function NotificationsProvider({
   children,
   target,
   ...others
-}: NotificationProviderProps) {
+}) => {
   const forceUpdate = useForceUpdate()
   const refs = useRef<Record<string, HTMLDivElement>>({})
   const previousLength = useRef<number>(0)
-  const { notifications, queue, showNotification, updateNotification, hideNotification, clean, cleanQueue } =
+  const { notifications, showNotification, updateNotification, hideNotification, clean, cleanQueue } =
     useNotificationsState({ limit })
 
-  //@ts-ignore
   const { classes, cx, theme } = useStyles({ zIndex })
   const shouldReduceMotion = useReducedMotion()
   const reduceMotion = theme.respectReducedMotion ? shouldReduceMotion : false
   const duration = reduceMotion ? 1 : transitionDuration
-  const positioning = (POSITIONS.includes(position) ? position : 'bottom-right').split(
-    '-',
-  ) as NotificationsProviderPositioning
+  const positioning = (POSITIONS.includes(position) ? position : 'bottom-right').split('-') as NotificationsPositioning
 
   useDidUpdate(() => {
     if (notifications.length > previousLength.current) {
@@ -120,23 +115,24 @@ export function NotificationsProvider({
   ))
 
   return (
-    <NotificationsContext.Provider value={{ notifications, queue }}>
-      <Portal target={target}>
-        <Box
-          className={cx(classes.notifications, className)}
-          style={style}
-          sx={{
-            maxWidth: containerWidth,
-            ...getPositionStyles(positioning, theme.spacing.md as number),
-          }}
-          {...others}>
-          <TransitionGroup>{items}</TransitionGroup>
-        </Box>
-      </Portal>
-
-      {children}
-    </NotificationsContext.Provider>
+    <Portal target={target}>
+      <Box
+        className={cx(classes.notifications, className)}
+        style={style}
+        sx={{
+          maxWidth: containerWidth,
+          ...getPositionStyles(positioning, theme.spacing.md),
+        }}
+        {...others}>
+        <TransitionGroup>{items}</TransitionGroup>
+      </Box>
+    </Portal>
   )
 }
 
-NotificationsProvider.displayName = '@rviseui/notifications/NotificationsProvider'
+Notifications.displayName = '@rviseui/notifications/Notifications'
+Notifications.show = GlobalNotifications.show
+Notifications.hide = GlobalNotifications.hide
+Notifications.update = GlobalNotifications.update
+Notifications.clean = GlobalNotifications.clean
+Notifications.cleanQueue = GlobalNotifications.cleanQueue

@@ -1,11 +1,13 @@
 import { TransitionStatus } from 'react-transition-group'
+
 import { CSSObject } from '@rviseui/core'
-import { NotificationsProviderPositioning } from '../../types'
+
+import { NotificationsPositioning } from '../../types'
 
 interface NotificationStateStylesProps {
   state: TransitionStatus
-  maxHeight: number
-  positioning: NotificationsProviderPositioning
+  maxHeight: number | string
+  positioning: NotificationsPositioning
   transitionDuration: number
 }
 

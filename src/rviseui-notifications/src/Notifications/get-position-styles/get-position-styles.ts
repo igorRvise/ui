@@ -1,7 +1,8 @@
 import { CSSObject } from '@rviseui/core'
-import { NotificationsProviderPositioning } from '../../types'
 
-export default function getPositionStyles([vertical, horizontal]: NotificationsProviderPositioning, spacing: number) {
+import { NotificationsPositioning } from '../../types'
+
+export default function getPositionStyles([vertical, horizontal]: NotificationsPositioning, spacing: number | string) {
   const styles: CSSObject = {}
 
   vertical === 'top' && (styles.top = spacing)

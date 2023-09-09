@@ -1,4 +1,5 @@
 import { createUseExternalEvents } from '@rviseui/utils'
+
 import type { NotificationProps } from './types'
 
 export type NotificationsEvents = {
@@ -17,3 +18,11 @@ export const hideNotification = createEvent('hide')
 export const cleanNotifications = createEvent('clean')
 export const cleanNotificationsQueue = createEvent('cleanQueue')
 export const updateNotification = createEvent('update')
+
+export const notifications: NotificationsEvents = {
+  show: showNotification,
+  hide: hideNotification,
+  clean: cleanNotifications,
+  cleanQueue: cleanNotificationsQueue,
+  update: updateNotification,
+}

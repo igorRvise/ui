@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import { Notification, DefaultProps } from '@rviseui/core'
-import getAutoClose from './get-auto-close/get-auto-close'
+
+import { DefaultProps, Notification } from '@rviseui/core'
+
 import { NotificationProps } from '../types'
+import getAutoClose from './get-auto-close/get-auto-close'
 
 export interface NotificationContainerProps extends DefaultProps {
   notification: NotificationProps

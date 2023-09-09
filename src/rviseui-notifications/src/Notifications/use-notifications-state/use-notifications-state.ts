@@ -1,4 +1,5 @@
-import { useQueue, randomId } from '@rviseui/hooks'
+import { randomId, useQueue } from '@rviseui/hooks'
+
 import { NotificationProps } from '../../types'
 
 export default function useNotificationsState({ limit }: { limit: number }) {
