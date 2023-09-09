@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/notifications",
   "description": "Notification system based on Rvise components",
-  "version": "0.4.34",
+  "version": "0.4.35",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -28,14 +28,14 @@
     "notification-system"
   ],
   "peerDependencies": {
-    "@rviseui/core": "0.4.34",
-    "@rviseui/hooks": "0.4.34",
+    "@rviseui/core": "0.4.35",
+    "@rviseui/hooks": "0.4.35",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "react-transition-group": "4.4.2",
-    "@rviseui/utils": "0.4.34"
+    "@rviseui/utils": "0.4.35"
   },
   "devDependencies": {}
 }

@@ -1,7 +1,7 @@
 {
   "name": "@rviseui/nprogress",
   "description": "Navigation progress bar",
-  "version": "0.4.34",
+  "version": "0.4.35",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
@@ -15,13 +15,13 @@
     "directory": "src/rviseui-nprogress"
   },
   "peerDependencies": {
-    "@rviseui/core": "0.4.34",
-    "@rviseui/hooks": "0.4.34",
+    "@rviseui/core": "0.4.35",
+    "@rviseui/hooks": "0.4.35",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@rviseui/utils": "0.4.34"
+    "@rviseui/utils": "0.4.35"
   },
   "devDependencies": {}
 }
